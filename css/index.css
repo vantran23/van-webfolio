@@ -357,7 +357,7 @@ body {
 }
 
 /* contact container */
-.contact-container {
+#contact {
 	background-color: #FFCAAF;
 	position: relative;
 	width: 100%;
