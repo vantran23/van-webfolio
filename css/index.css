@@ -162,7 +162,7 @@ a {
 
 .name {
 	position: absolute;
-	top: 30%;
+	top: 27%;
 	left: 70%;
 	transform: translate(-50%, -50%);
 	font-size: 5vw;
@@ -172,7 +172,7 @@ a {
 
 .who {
 	position: absolute;
-	top: 38%;
+	top: 33%;
 	left: 70%;
 	transform: translate(-50%, -50%);
 	font-size: 1.5vw;
@@ -339,50 +339,21 @@ body {
 .middle-container {
 	position: relative;
 	width: 100%;
-	display: flex;
-	padding-bottom: 40%;
-	min-height: 20vh;
-	background-color: #2D2D2D;
+	height: 100%;
+	margin:0;	
 }
 
-.california {
-    max-width: 550px;
-    height: auto;
-	padding-left: 3%;
-	padding-right: 5%;
-	width: 50%;
-	padding-top: 8%;
-	position: absolute;
-}
-
-.divider {
-	border-left: 2px solid white;
-	height: 450px;
-	position: absolute;
-	left: 50%;
-	top: 25%;
-	width: 50%;
-	height: 50%;
-}
-
-.about-title {
-	color: #E5E5E5;
-	position: absolute;
-	top: 25%;
-	left: 62%;
-	transform: translate(-50%, -50%);
-	font-size: 3vw;
-	font-family: 'Poiret One', cursive;
-}
-
-.about-description {
-	color: #E5E5E5;
-	position: absolute;
-	top: 45%;
-	left: 72%;
-	transform: translate(-50%, -50%);
-	font-size: 1.5vw;
-	font-family: 'Poiret One', cursive;
+.beach{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+	margin-right: auto;
+	margin:0;
+	top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 /* contact container */
@@ -396,25 +367,6 @@ body {
 
 }
 
-.section-divider {
-	position: relative;
-  }
-  .section-divider:before {
-		font-family: 'codepen';
-		content: "C"; 
-		width: 6.5rem;
-		height: 6.5rem;
-		background: #FFCAAF;
-		border-radius: 100%;
-		position: absolute;
-		top: -3.25rem;
-		left: calc(50% - 3.25rem);
-		color: #2D2D2D;
-		line-height: 6rem;
-		text-indent: 1.75rem;
-		font-size: 4rem;
-	  }
-  
 
 .divider-2 {
 	border-left: 2px solid #2D2D2D;
