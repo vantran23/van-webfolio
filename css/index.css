@@ -357,24 +357,671 @@ body {
 }
 
 /* contact container */
-#contact {
-	background-color: #FFCAAF;
-	position: relative;
-	width: 100%;
-	display: flex;
-	padding-bottom: 50%;
-	min-height: 30vh;
 
+
+.window {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+	margin-right: auto;
+	margin:0;
+	top: 0;
+    bottom: 0;
+    right: 0;
+	left: 0;
+	z-index: 1;
 }
 
 
-.divider-2 {
-	border-left: 2px solid #2D2D2D;
-	height: 400px;
+
+.contact-container {
 	position: absolute;
-	left: 50%;
-	top: 15%;
-	width: 50%;
-	height: 50%;
+	margin-left:95%;
+	z-index: 3;
+	margin-top:-30%;
+	width: 10%;
+	height: 50vh;
 }
 
+  
+  /* Begin Left Contact Page */
+  .form-horizontal {
+	float: right;
+	max-width: 400px;
+	font-family: 'Caveat Brush', cursive;
+	font-weight: 400;
+  }
+  
+  .form-control, textarea {
+	max-width: 400px;
+	background: rgba(255,255,255,0.4);
+	color: black;
+	letter-spacing: 1px;
+	font-size: 20px;
+	font-family: 'Caveat Brush', cursive;
+  }
+  
+  .send-button {
+	margin-top: 15px;
+	height: 34px;
+	width: 400px;
+	overflow: hidden;
+	transition: all .2s ease-in-out;
+  }
+  
+  .button {
+	width: 400px;
+	height: 34px;
+	transition: all .2s ease-in-out;
+  }
+  
+  .send-text {
+	display: block;
+	margin-top: 10px;
+	font: 300 14px 'Caveat Brush', sans-serif;
+	letter-spacing: 2px;
+  }
+  
+  .button:hover {
+	transform: translate3d(0px, -29px, 0px);
+  }
+  
+
+  @media screen and (max-width: 410px) {
+	.send-button {
+	  width: 99%;
+	}
+  }
+
+textarea {
+	width: 400px;
+	height:150px;
+  } 
+input{
+	width:400px;
+	height:18px;
+	margin-bottom:15px;
+}
+  
+  
+
+.dolls-container {
+	position: absolute;
+	margin-left:55%;
+	font-size: 0.8vw;
+	z-index: 2;
+	margin-top:-2%;
+}
+
+
+  /* transition definitions */
+  .doll {
+	  -webkit-backface-visibility: hidden;
+	  -webkit-transform: translate3d(0,0,0);
+	  -moz-transition: all .5s;
+	  -ms-transition: all .5s;
+	  -o-transition: all .5s;
+	  -webkit-transition: all .5s;
+	  transition: all .5s;
+  }
+  
+  .head {
+	  -moz-transition: -moz-transform .5s;
+	  -ms-transition: -ms-transform .5s;
+	  -o-transition: -o-transform .5s;
+	  -webkit-transition: -webkit-transform .5s;
+	  transition: transform .5s;
+	  -moz-transform-origin: .5em .35em;
+	  -ms-transform-origin: .5em .35em;
+	  -o-transform-origin: .5em .35em;
+	  -webkit-transform-origin: .5em .35em;
+	  transform-origin: .5em .35em;
+  }
+  
+  /*--------------------
+	  general doll styles
+	  -------------------- */
+  .doll {
+	  bottom: .1em;
+	  height: 1em;
+	  margin-left: -.25em;
+	  position: absolute;
+	  width: .5em;
+	  z-index: -1;
+  }
+  
+  .master.doll {
+	  font-size: 30em;
+	  /*left: 50%;*/
+  }
+  
+  .doll .doll {
+	  font-size: .6em;
+	  left: -.7em;
+  }
+  
+  /* head hole */
+  .doll::before {
+	  background: #421b13;
+	  border-radius: 50%;
+	  content: '';
+	  display: block;
+	  height: .05em;
+	  left: 50%;
+	  margin-left: -.19em;
+	  position: relative;
+	  top: 0.39em;
+	  width: 0.38em;
+	  z-index: -1;
+  }
+  
+  /* doll shadow */
+  .doll::after {
+	  background: rgba(0, 0, 0, .3);
+	  border-radius: 50%;
+	  content: '';
+	  display: block;
+	  height: 0.16em;
+	  left: 50%;
+	  margin-left: -.35em;
+	  position: relative;
+	  bottom: 0.15em;
+	  width: 0.7em;
+	  z-index: -1;
+  }
+  
+  .head {
+	  background: #2773B1;
+	  border-top-left-radius: 45%;
+	  border-top-right-radius: 45%;
+	  border-bottom-left-radius: 50% 10%;
+	  border-bottom-right-radius: 50% 10%;
+	  box-shadow: 0 .005em 0 rgba(0,0,0,.4);
+	  height: .3em;
+	  left: 50%;
+	  margin-left: -.2em;
+	  padding: .05em;
+	  position: relative;
+	  width: .3em;
+	  z-index: 2;
+  }
+  
+  .face {
+	  background: #efdfab;
+	  border-radius: 50%;
+	  height: .3em;
+	  overflow: hidden;
+	  position: relative;
+	  width: .3em;
+  }
+  
+  .hair {
+	  background: #302214;
+	  border-radius: 50%;
+	  height: .3em;
+	  margin: -.2em;
+	  position: absolute;
+	  width: .3em;
+  }
+  
+  .hair::after {
+	  background: #302214;
+	  border-radius: 50%;
+	  content: '';
+	  display: block;
+	  height: .3em;
+	  margin: 0 0 0 .27em;
+	  width: .3em;
+  }
+  
+  .eye {
+	  background: white;
+	  border-radius: 50% / 60% 60% 30% 30%;
+	  height: .05em;
+	  left: 50%;
+	  margin-top: -.03em;
+	  position: absolute;
+	  top: 50%;
+	  width: .07em;
+  }
+  
+  /* eyebrows */
+  .eye::before {
+	  border-top: .010em solid black;
+	  border-radius: 50%;
+	  content: '';
+	  display: block;
+	  height: .05em;
+	  left: 50%;
+	  margin: -.02em -5em 0 -.008em;
+	  top: 50%;
+	  width: .08em;
+  }
+  
+  /* pupil */
+  .eye::after {
+	  background: #27170f;
+	  border: .0068em solid white;
+	  border-radius: 50%;
+	  content: '';
+	  display: block;
+	  height: .036em;
+	  left: 50%;
+	  margin: 0 0 0 -.0248em;
+	  position: absolute;
+	  top: 0;
+	  width: .036em;
+  }
+  
+  .left.eye {
+	  margin-left: -.09em;
+  }
+  
+  .right.eye {
+	  margin-left: .03em;
+  }
+  
+  .nose {
+	  border-top: .005em solid #ead393;
+	  border-radius: 50% / 70% 70% 30% 30%;
+	  height: .02em;
+	  left: 50%;
+	  margin: .02em 0 0 -.015em;
+	  position: absolute;
+	  top: 50%;
+	  width: .04em;
+  }
+  
+  .mouth {
+	  background: #f97f95;
+	  border-radius: 100% / 90% 90% 90% 90%;
+	  height: .04em;
+	  left: 50%;
+	  margin: .07em 0 0 -.05em;
+	  position: absolute;
+	  top: 50%;
+	  width: .1em;
+  }
+  
+  /* rosie cheeks */
+  .mouth::before,
+  .mouth::after {
+	  background: #fcc9b0;
+	  border-radius: 50%;
+	  content: '';
+	  display: inline-block;
+	  height: .06em;
+	  position: absolute;
+	  top: -.04em;
+	  width: .06em;
+  }
+  
+  .mouth::before {
+	  left: -.07em;
+  }
+  
+  .mouth::after {
+	  left: .11em;
+  }
+  
+  .shape {
+	  background: #2773B1;
+	  border-top-left-radius: 20% 65%;
+	  border-top-right-radius: 20% 65%;
+	  border-bottom-left-radius: 50% 15%;
+	  border-bottom-right-radius: 50% 15%;
+	  box-shadow: 0 .005em 0 rgba(0,0,0,.4);
+	  height: .6em;
+	  left: 50%;
+	  margin: -.04em 0 0 -.3em;
+	  position: relative;
+	  width: .6em;
+  }
+  
+  /* placket - general */
+  .shape::before,
+  .shape::after {
+	  background: white;
+	  bottom: -.5%;
+	  content: '';
+	  display: block;
+	  height: 96.4%;
+	  left: 50%;
+	  margin-left: -.1em;
+	  position: absolute;
+	  width: .1em;
+  }
+  
+  /* placket - left */
+  .shape::before {
+	  border-radius: 70% 0 0 100% / 100% 0 0 2%;
+	  box-shadow: .005em 0 0 rgba(0,0,0,.3) inset;
+  }
+  
+  /* placket - right */
+  .shape::after {
+	  border-radius: 0 70% 100% 0 / 0 100% 2% 0;
+	  box-shadow: -.005em 0 0 rgba(0,0,0,.3) inset;
+	  margin-left: 0;
+  }
+  
+  .arm {
+	  border: .005em solid rgba(0,0,0,.2);
+	  height: .1em;
+	  position: absolute;
+	  top: 30%;
+	  width: .1em;
+  }
+  
+  .left.arm {
+	  border-left: none;
+	  left: .05em;
+	  -webkit-transform: skew(-10deg, 5deg);
+  }
+  
+  .right.arm {
+	  border-right: none;
+	  right: .05em;
+	  -webkit-transform: rotate(-40deg);
+  }
+  
+  /* hands */
+  .arm::after {
+	  background: #efdfab;
+	  display: block;
+	  height: 100%;
+	  overflow: hidden;
+	  position: relative;
+	  width: 50%;
+	  content: '';
+  }
+  
+  /* left hand */
+  .left.arm::after {
+	  border-radius: 0 50% 50% 0;
+	  right: -100%;
+  }
+  
+  /* right hand */
+  .right.arm::after {
+	  border-radius: 50% 0 0 50%;
+	  left: -50%;
+  }
+  
+  /*--------------------
+	  specific doll styles
+	  -------------------- */
+  /* doll2 */
+  .master.doll > .doll > .head {
+	  background: grey;
+  }
+  .master.doll > .doll > .shape {
+	background: black;
+}
+
+  
+  .master.doll > .doll > .body {
+	  background: -webkit-radial-gradient(center top, 0.35em .05em, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, .2) 46%, rgba(0, 0, 0, .2) 49%, rgba(234, 134, 35, 0) 50%, rgb(234, 134, 35) 51%);
+  }
+  
+  .master.doll > .doll > .body::before,
+  .master.doll > .doll > .body::after {
+	  background: #9ece44;
+  }
+  
+  /* doll3 */
+  .master.doll > .doll  > .doll > .head {
+	  background: #ebc55d;
+  }
+  
+  .master.doll > .doll  > .doll > .body {
+	  background: -webkit-radial-gradient(center top, 0.35em .05em, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, .2) 46%, rgba(0, 0, 0, .2) 49%, rgba(235, 197, 93, 0) 50%, rgb(235, 197, 93) 51%);
+  }
+  
+  .master.doll > .doll  > .doll > .body::before,
+  .master.doll > .doll  > .doll > .body::after {
+	  background: #4560cc;
+  }
+  
+  /* doll4 */
+  .master.doll > .doll > .doll > .doll > .head {
+	  background: #9ece44;
+  }
+  
+  .master.doll > .doll > .doll > .doll > .body {
+	  background: -webkit-radial-gradient(center top, 0.35em .05em, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, .2) 46%, rgba(0, 0, 0, .2) 49%, rgba(158, 206, 68, 0) 50%, rgb(158, 206, 68) 51%);
+  }
+  
+  .master.doll > .doll > .doll > .doll > .body::before,
+  .master.doll > .doll > .doll > .doll > .body::after {
+	  background: #8845cc;
+  }
+  
+  /* doll5 */
+  .master.doll > .doll > .doll > .doll > .doll > .head {
+	  background: #4560cc;
+  }
+  
+  .master.doll > .doll > .doll > .doll > .doll > .body {
+	  background: -webkit-radial-gradient(center top, 0.35em .05em, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, .2) 46%, rgba(0, 0, 0, .2) 49%, rgba(69, 96, 204, 0) 50%, rgb(69, 96, 204) 51%);
+  }
+  
+  .master.doll > .doll > .doll > .doll > .doll > .body::before,
+  .master.doll > .doll > .doll > .doll > .doll > .body::after {
+	  background: #c72f43;
+  }
+  
+  /* doll6 */
+  .master.doll > .doll > .doll > .doll > .doll > .doll > .head {
+	  background: #8845cc;
+  }
+  
+  .master.doll > .doll > .doll > .doll > .doll > .doll > .body {
+	  background: -webkit-radial-gradient(center top, 0.35em .05em, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, .2) 46%, rgba(0, 0, 0, .2) 49%, rgba(136, 69, 204, 0) 50%, rgb(136, 69, 204) 51%);
+  }
+  
+  .master.doll > .doll > .doll > .doll > .doll > .doll > .body::before,
+  .master.doll > .doll > .doll > .doll > .doll > .doll > .body::after {
+	  background: #ea8623;
+  }
+  
+  
+  
+  
+  /*----------------
+	  media queries
+	  ---------------- */
+  /* all showing */
+  @media screen and (min-width: 1520px) {
+	  .master.doll {
+		  left: 80%;
+	  }
+  }
+  
+  /* doll6 in air */
+  @media screen and (min-width: 1480px) and (max-width: 1519px) {
+	  .master.doll {
+		  left: 80%;
+	  }
+  
+	  .master.doll > .doll > .doll > .doll > .doll > .doll {
+		  left: 50%;
+		  top: -.5em;
+	  }
+  
+	  .master.doll > .doll > .doll > .doll > .doll > .doll::after {
+		  background: rgba(0, 0, 0, 0);
+	  }
+  
+	  .master.doll > .doll > .doll > .doll > .doll > .head {
+		  -moz-transform: rotate(75deg);
+		  -ms-transform: rotate(75deg);
+		  -o-transform: rotate(75deg);
+		  -webkit-transform: rotate(75deg);
+		  transform: rotate(75deg);
+	  }
+  }
+  
+  /* 1-5 showing */
+  @media screen and (min-width: 1380px) and (max-width: 1479px) {
+	  .master.doll {
+		  right: 80%;
+	  }
+  
+	  .master.doll > .doll > .doll > .doll > .doll > .doll {
+		  left: 50%;
+	  }
+  }
+  
+  /* 5 in air */
+  @media screen and (min-width: 1330px) and (max-width: 1379px) {
+	  .master.doll {
+		  left: 80%;
+	  }
+  
+	  .master.doll > .doll > .doll > .doll .doll {
+		  left: 50%;
+	  }
+  
+	  .master.doll > .doll > .doll > .doll > .doll {
+		  top: -.5em;
+	  }
+  
+	  .master.doll > .doll > .doll > .doll > .doll::after {
+		  background: rgba(0, 0, 0, 0);
+	  }
+  
+	  .master.doll > .doll > .doll > .doll > .head {
+		  -moz-transform: rotate(75deg);
+		  -ms-transform: rotate(75deg);
+		  -o-transform: rotate(75deg);
+		  -webkit-transform: rotate(75deg);
+		  transform: rotate(75deg);
+	  }
+  }
+  
+  /* 1-4 showing */
+  @media screen and (min-width: 1240px) and (max-width: 1329px) {
+	  .master.doll {
+		  left: 80%;
+	  }
+  
+	  .master.doll > .doll > .doll > .doll .doll {
+		  left: 50%;
+	  }
+  }
+  
+  /* 4 in air */
+  @media screen and (min-width: 1200px) and (max-width: 1239px) {
+	  .master.doll {
+		  left: 75%;
+	  }
+  
+	  .master.doll > .doll > .doll .doll {
+		  left: 50%;
+	  }
+  
+	  .master.doll > .doll > .doll > .doll {
+		  top: -.5em;
+	  }
+  
+	  .master.doll > .doll > .doll > .doll::after {
+		  background: rgba(0, 0, 0, 0);
+	  }
+  
+	  .master.doll > .doll > .doll > .head {
+		  -moz-transform: rotate(75deg);
+		  -ms-transform: rotate(75deg);
+		  -o-transform: rotate(75deg);
+		  -webkit-transform: rotate(75deg);
+		  transform: rotate(75deg);
+	  }
+  }
+  
+  /* 1-3 showing */
+  @media screen and (min-width: 1150px) and (max-width: 1199px) {
+	  .master.doll {
+		  left: 75%;
+	  }
+  
+	  .master.doll > .doll > .doll .doll {
+		  left: 50%;
+	  }
+  }
+  
+  /* 3 in air */
+  @media screen and (min-width: 1100px) and (max-width: 1149px) {
+	  .master.doll {
+		  left: 75%;
+	  }
+  
+	  .master.doll > .doll .doll {
+		  left: 50%;
+	  }
+  
+	  .master.doll > .doll > .doll {
+		  top: -.5em;
+	  }
+  
+	  .master.doll > .doll > .doll::after {
+		  background: rgba(0, 0, 0, 0);
+	  }
+  
+	  .master.doll > .doll > .head {
+		  -moz-transform: rotate(75deg);
+		  -ms-transform: rotate(75deg);
+		  -o-transform: rotate(75deg);
+		  -webkit-transform: rotate(75deg);
+		  transform: rotate(75deg);
+	  }
+  }
+  
+  /* 1-2 showing */
+  @media screen and (min-width: 1028px) and (max-width: 1099px) {
+	  .master.doll {
+		  left: 70%;
+	  }
+  
+	  .master.doll > .doll .doll {
+		  left: 50%;
+	  }
+  }
+  
+  /* 2 in air */
+  @media screen and (min-width: 967px) and (max-width: 1027px) {
+	  .master.doll {
+		  left: 70%;
+	  }
+  
+	  .master.doll .doll {
+		  left: 50%;
+	  }
+  
+	  .master.doll > .doll {
+		  top: -.5em;
+	  }
+  
+	  .master.doll > .doll::after {
+		  background: rgba(0, 0, 0, 0);
+	  }
+  
+	  .master.doll > .head {
+		  -moz-transform: rotate(75deg);
+		  -ms-transform: rotate(75deg);
+		  -o-transform: rotate(75deg);
+		  -webkit-transform: rotate(75deg);
+		  transform: rotate(75deg);
+	  }
+  }
+  
+  /* 1 showing */
+  @media screen and (max-width: 966px) {
+	  .master.doll {
+		  left: 50%;
+	  }
+  
+	  .master.doll .doll {
+		  left: 50%;
+	  }
+  }
