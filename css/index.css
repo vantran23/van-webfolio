@@ -403,7 +403,7 @@ body {
 	content: '';
 	display: block;
 	height: 96.4%;
-	left: 32%;
+	left: 28%;
 	margin-left: -.1em;
 	position: absolute;
 	width: 2em;
@@ -417,7 +417,7 @@ body {
 	content: '';
 	display: block;
 	height: 96.4%;
-	left: 25%;
+	left: 23%;
 	margin-left: -.1em;
 	position: absolute;
 	width: 2em;
@@ -508,7 +508,7 @@ input{
 	margin-left:30%;
 	font-size: 0.8vw;
 	z-index: 2;
-	margin-top:-20%;
+	margin-top:-21%;
 }
 
 
@@ -549,7 +549,7 @@ input{
   }
   
   .master.doll {
-	  font-size: 17em;
+	  font-size: 15em;
 	  /*left: 50%;*/
   }
   
