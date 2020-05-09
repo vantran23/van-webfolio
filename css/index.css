@@ -163,7 +163,7 @@ a {
 
 .name {
 	position: absolute;
-	top: 27%;
+	top: 25%;
 	left: 70%;
 	transform: translate(-50%, -50%);
 	font-size: 5vw;
@@ -173,7 +173,7 @@ a {
 
 .who {
 	position: absolute;
-	top: 33%;
+	top: 30%;
 	left: 70%;
 	transform: translate(-50%, -50%);
 	font-size: 1.5vw;
@@ -395,7 +395,7 @@ body {
 }
 
 .resume a:hover{
-	color: whitesmoke;
+	color: red;
 } 
 
 .linkedin {
